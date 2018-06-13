@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Jmotor自动化测试]" parallel="tests">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="com.quark.mobile.testng.ScreenShotListener"/>
+    <listener class-name="com.quark.mobile.testng.RetryListener"/>
+  </listeners>
+  <test name="LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555(failed)" parallel="tests">
+    <parameter name="appPackage" value="com.quarkfinance.ufo"/>
+    <parameter name="appActivity" value="com.quarkfinance.ufo.ui.StartActivity"/>
+    <parameter name="platformVersion" value="6.0.0"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="udid" value="192.168.189.101:5555"/>
+    <parameter name="deviceName" value="Nexus5"/>
+    <classes>
+      <class name="com.quark.mobile.testcase.ufo.LoginUFO">
+        <methods>
+          <include name="saveFailedScreen"/>
+          <include name="quitServer"/>
+          <include name="login" invocation-numbers="0"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.quark.mobile.testcase.ufo.LoginUFO -->
+    </classes>
+  </test> <!-- LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555(failed) -->
+</suite> <!-- Failed suite [Jmotor自动化测试] -->

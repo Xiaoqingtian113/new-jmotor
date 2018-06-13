@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - QoneLogin-Android7.1.0-Nexus6-192.168.189.102:5555</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>QoneLogin-Android7.1.0-Nexus6-192.168.189.102:5555</h1>
+<p>
+  Test duration: 32.969s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="5" class="header failed">Failed Tests</th></tr>
+          <tr>
+          <td colspan="1" class="group">com.quark.mobile.testcase.QoneLogin</td>
+          <td colspan="1" class="group">Duration</td>
+          <td colspan="1" class="group">Log Info</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  login
+      </td>
+  <td class="duration">
+    23.555s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">{passWord=zcq123, userName=18062570820, toRun=yes}</span><br />
+    
+            <div class="testOutput">
+                        <a href=http://172.29.20.31:8080/images/20180211181545643.png target=_blank style=color:red><img src=E:\workspace\new-jmotor\config\screenshot.png style=width:16px;height:16px align=absmiddle><b>20180211181545643.png</b></a>
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.quark.mobile.appium.JMotorAction$3@64e28444 (tried for 20 second(s) with 500 MILLISECONDS interval)</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)<br />
+              org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)<br />
+              com.quark.mobile.appium.JMotorAction.findElementWhenVisibility(JMotorAction.java:153)<br />
+              com.quark.mobile.testcase.QoneLogin.login(QoneLogin.java:31)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:661)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:744)<br />
+              org.testng.TestRunner.run(TestRunner.java:602)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:39)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+              java.lang.Thread.run(Thread.java:745)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: com.quarkfinance.qone:id/et_phonenum<br/>
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;<br/>
+System info: host: &apos;WH-CHUNQINGZ-01&apos;, ip: &apos;172.29.20.31&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_92&apos;<br/>
+Driver info: driver.version: unknown</a><br />
+        <div class="stackTrace" id="exception-1">
+                      com.quark.mobile.appium.JMotorAction$3.lambda$0(JMotorAction.java:157)<br />
+                      java.util.Optional.orElseThrow(Optional.java:290)<br />
+                      com.quark.mobile.appium.JMotorAction$3.apply(JMotorAction.java:156)<br />
+                      com.quark.mobile.appium.JMotorAction$3.apply(JMotorAction.java:1)<br />
+                      org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)<br />
+                      com.quark.mobile.appium.JMotorAction.findElementWhenVisibility(JMotorAction.java:153)<br />
+                      com.quark.mobile.testcase.QoneLogin.login(QoneLogin.java:31)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br />
+                      org.testng.internal.Invoker.invokeMethod(Invoker.java:661)<br />
+                      org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br />
+                      org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br />
+                      org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br />
+                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:744)<br />
+                      org.testng.TestRunner.run(TestRunner.java:602)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br />
+                      org.testng.SuiteRunner.access$000(SuiteRunner.java:39)<br />
+                      org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)<br />
+                      org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+                      java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+                      java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+                      java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+                      java.lang.Thread.run(Thread.java:745)<br />
+                  </div>
+          </div>
+      </td>
+
+</tr>
+      </table>
+
+
+  
+</body>
+</html>

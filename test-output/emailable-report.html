@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Jmotor自动化测试</th></tr><tr><td><a href="#t0">LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">38,882</td><td></td><td></td></tr></table><table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Jmotor自动化测试</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.quark.mobile.testcase.ufo.LoginUFO</td><td><a href="#m0">login</a></td><td rowspan="1">1521699796305</td><td rowspan="1">28463</td></tr></tbody></table><h2>LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555</h2><h3 id="m0">com.quark.mobile.testcase.ufo.LoginUFO#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{passWord=qwe123, userName=14480372033, toRun=yes}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages"><a href=http://192.168.192.130:8080/images/20180322142344768.png target=_blank style=color:red><img src=E:\workspace\new-jmotor\config\screenshot.png style=width:16px;height:16px align=absmiddle><b>20180322142344768.png</b></a></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: com.quarkfinance.ufo:id/tv_login (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.quark.mobile.appium.JMotorDriver.findElementWhenPresence(JMotorDriver.java:134)
+	at com.quark.mobile.testcase.ufo.LoginUFO.login(LoginUFO.java:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: com.quarkfinance.ufo:id/tv_login
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
+System info: host: &apos;WH-CHUNQINGZ-01&apos;, ip: &apos;172.29.20.31&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_92&apos;
+Driver info: driver.version: JMotorDriver
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 22 more
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

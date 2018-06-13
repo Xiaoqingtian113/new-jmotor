@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<a href=http://192.168.192.130:8080/images/20180322142344768.png target=_blank style=color:red><img src=E:\workspace\new-jmotor\config\screenshot.png style=width:16px;height:16px align=absmiddle><b>20180322142344768.png</b></a>]]>
+    </line>
+  </reporter-output>
+  <suite name="Jmotor自动化测试" duration-ms="38882" started-at="2018-03-22T06:23:07Z" finished-at="2018-03-22T06:23:46Z">
+    <groups>
+    </groups>
+    <test name="LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555" duration-ms="38882" started-at="2018-03-22T06:23:07Z" finished-at="2018-03-22T06:23:46Z">
+      <class name="com.quark.mobile.testcase.ufo.LoginUFO">
+        <test-method status="PASS" signature="initDriver(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.quark.mobile.testcase.ufo.LoginUFO@32502377]" name="initDriver" is-config="true" duration-ms="8461" started-at="2018-03-22T14:23:07Z" finished-at="2018-03-22T14:23:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6.0.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nexus5]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[noBrowserName]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[noBrowserVersion]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[noAppPath]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[com.quarkfinance.ufo]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[com.quarkfinance.ufo.ui.StartActivity]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[noBundleIdy]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[192.168.189.101:5555]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[noAppWaitActivity]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="login(java.util.HashMap)[pri:0, instance:com.quark.mobile.testcase.ufo.LoginUFO@32502377]" name="login" duration-ms="28463" started-at="2018-03-22T14:23:16Z" data-provider="dp" finished-at="2018-03-22T14:23:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{passWord=qwe123, userName=14480372033, toRun=yes}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.id: com.quarkfinance.ufo:id/tv_login (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: com.quarkfinance.ufo:id/tv_login (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.quark.mobile.appium.JMotorDriver.findElementWhenPresence(JMotorDriver.java:134)
+	at com.quark.mobile.testcase.ufo.LoginUFO.login(LoginUFO.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: com.quarkfinance.ufo:id/tv_login
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'WH-CHUNQINGZ-01', ip: '172.29.20.31', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_92'
+Driver info: driver.version: JMotorDriver
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 22 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<a href=http://192.168.192.130:8080/images/20180322142344768.png target=_blank style=color:red><img src=E:\workspace\new-jmotor\config\screenshot.png style=width:16px;height:16px align=absmiddle><b>20180322142344768.png</b></a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="saveFailedScreen(org.testng.ITestResult)[pri:0, instance:com.quark.mobile.testcase.ufo.LoginUFO@32502377]" name="saveFailedScreen" is-config="true" duration-ms="1443" started-at="2018-03-22T14:23:44Z" finished-at="2018-03-22T14:23:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=FAILURE method=LoginUFO.login(java.util.HashMap)[pri:0, instance:com.quark.mobile.testcase.ufo.LoginUFO@32502377] output=<a href=http://192.168.192.130:8080/images/20180322142344768.png target=_blank style=color:red><img src=E:\workspace\new-jmotor\config\screenshot.png style=width:16px;height:16px align=absmiddle><b>20180322142344768.png</b></a>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveFailedScreen -->
+        <test-method status="PASS" signature="quitServer()[pri:0, instance:com.quark.mobile.testcase.ufo.LoginUFO@32502377]" name="quitServer" is-config="true" duration-ms="470" started-at="2018-03-22T14:23:46Z" finished-at="2018-03-22T14:23:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitServer -->
+      </class> <!-- com.quark.mobile.testcase.ufo.LoginUFO -->
+    </test> <!-- LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555 -->
+  </suite> <!-- Jmotor自动化测试 -->
+</testng-results>
