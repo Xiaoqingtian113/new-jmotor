@@ -3,25 +3,24 @@
 <suite thread-count="1" name="Failed suite [Jmotor自动化测试]" parallel="tests">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="com.quark.mobile.testng.ScreenShotListener"/>
-    <listener class-name="com.quark.mobile.testng.RetryListener"/>
+    <listener class-name="com.zhucq.mobile.testng.ScreenShotListener"/>
+    <listener class-name="com.zhucq.mobile.testng.RetryListener"/>
   </listeners>
-  <test name="LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555(failed)" parallel="tests">
-    <parameter name="appPackage" value="com.quarkfinance.ufo"/>
-    <parameter name="appActivity" value="com.quarkfinance.ufo.ui.StartActivity"/>
+  <test name="QoneLogin-Android6.0.0-Nexus5-192.168.189.101:5555(failed)" parallel="tests">
     <parameter name="platformVersion" value="6.0.0"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="udid" value="192.168.189.101:5555"/>
     <parameter name="deviceName" value="Nexus5"/>
+    <parameter name="appPath" value="E:\workspace\new-jmotor\app\qone.apk"/>
     <classes>
-      <class name="com.quark.mobile.testcase.ufo.LoginUFO">
+      <class name="com.zhucq.mobile.testcase.qone.QoneLogin">
         <methods>
-          <include name="saveFailedScreen"/>
+          <include name="login"/>
           <include name="quitServer"/>
-          <include name="login" invocation-numbers="0"/>
+          <include name="saveFailedScreen"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- com.quark.mobile.testcase.ufo.LoginUFO -->
+      </class> <!-- com.zhucq.mobile.testcase.qone.QoneLogin -->
     </classes>
-  </test> <!-- LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555(failed) -->
+  </test> <!-- QoneLogin-Android6.0.0-Nexus5-192.168.189.101:5555(failed) -->
 </suite> <!-- Failed suite [Jmotor自动化测试] -->

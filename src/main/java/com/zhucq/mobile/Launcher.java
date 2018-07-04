@@ -3,6 +3,7 @@ package com.zhucq.mobile;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -44,14 +45,14 @@ public class Launcher {
 		suite.setThreadCount(clsNum);
 		ArrayList<String> listeners = new ArrayList<String>();
 		listeners.add("org.uncommons.reportng.HTMLReporter");
-		listeners.add("com.quark.mobile.testng.ScreenShotListener");
-		listeners.add("com.quark.mobile.testng.RetryListener");
+		listeners.add("com.zhucq.mobile.testng.ScreenShotListener");
+		listeners.add("com.zhucq.mobile.testng.RetryListener");
 		suite.setListeners(listeners);
 		
 		for(int i=0; i<clsNum; i++){
 			RunningConfig rc = cfgList.get(i);
 			
-			XmlTest test = new XmlTest(suite);
+			XmlTest test = new XmlTest();
 			String testName = "";
 			try {
 				testName = BeanUtils.getProperty(rc,"className") + "-"
@@ -97,7 +98,7 @@ public class Launcher {
 			
 			XmlClass[] classes = new XmlClass[1];
 			try {
-				classes[0] = new XmlClass("com.quark.mobile.testcase." + args[0] + "." + BeanUtils.getProperty(rc,"className"));
+				classes[0] = new XmlClass("com.zhucq.mobile.testcase." + args[0] + "." + BeanUtils.getProperty(rc,"className"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -109,9 +110,9 @@ public class Launcher {
 		tng.setXmlSuites(Arrays.asList(new XmlSuite[] { suite }));
 		PrintWriter tngxml = null;
 		try {
-			tngxml = new PrintWriter("testng.xml");
+			tngxml = new PrintWriter("testng.xml","utf-8");
 			tngxml.println(suite.toXml());
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException | UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} finally {
 			tngxml.close();

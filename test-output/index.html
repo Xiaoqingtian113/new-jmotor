@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -34,129 +34,10 @@
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
-      <div class="suite">
-        <div class="rounded-window">
-          <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Jmotor自动化测试">
-              <span class="suite-name border-failed">Jmotor自动化测试</span>
-            </a> <!-- navigator-link -->
-          </div> <!-- suite-header light-rounded-window-top -->
-          <div class="navigator-suite-content">
-            <div class="suite-section-title">
-              <span>Info</span>
-            </div> <!-- suite-section-title -->
-            <div class="suite-section-content">
-              <ul>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Jmotor自动化测试">
-                    <span>[unset file name]</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Jmotor自动化测试">
-                    <span class="test-stats">1 test</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="group-Jmotor自动化测试">
-                    <span>0 groups</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="times-Jmotor自动化测试">
-                    <span>Times</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Jmotor自动化测试">
-                    <span>Reporter output</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Jmotor自动化测试">
-                    <span>Ignored methods</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-                <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Jmotor自动化测试">
-                    <span>Chronological view</span>
-                  </a> <!-- navigator-link  -->
-                </li>
-              </ul>
-            </div> <!-- suite-section-content -->
-            <div class="result-section">
-              <div class="suite-section-title">
-                <span>Results</span>
-              </div> <!-- suite-section-title -->
-              <div class="suite-section-content">
-                <ul>
-                  <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Jmotor自动化测试" class="hide-methods failed suite-Jmotor自动化测试"> (hide)</a> <!-- hide-methods failed suite-Jmotor自动化测试 -->
-                      <a href="#" panel-name="suite-Jmotor自动化测试" class="show-methods failed suite-Jmotor自动化测试"> (show)</a> <!-- show-methods failed suite-Jmotor自动化测试 -->
-                    </span>
-                    <div class="method-list-content failed suite-Jmotor自动化测试">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Jmotor自动化测试" title="com.quark.mobile.testcase.ufo.LoginUFO" hash-for-method="login({passWord=qwe123, userName=14480372033, toRun=yes})">login({passWord=qwe123, userName=14480372033, toRun=yes})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Jmotor自动化测试 -->
-                  </li>
-                </ul>
-              </div> <!-- suite-section-content -->
-            </div> <!-- result-section -->
-          </div> <!-- navigator-suite-content -->
-        </div> <!-- rounded-window -->
-      </div> <!-- suite -->
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Jmotor自动化测试" class="panel Jmotor自动化测试">
-          <div class="suite-Jmotor自动化测试-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.quark.mobile.testcase.ufo.LoginUFO</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="login({passWord=qwe123, userName=14480372033, toRun=yes})">
-                  </a> <!-- login({passWord=qwe123, userName=14480372033, toRun=yes}) -->
-                  <span class="method-name">login</span>
-                  <span class="parameters">({passWord=qwe123, userName=14480372033, toRun=yes})</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: com.quarkfinance.ufo:id/tv_login (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.quark.mobile.appium.JMotorDriver.findElementWhenPresence(JMotorDriver.java:134)
-	at com.quark.mobile.testcase.ufo.LoginUFO.login(LoginUFO.java:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: com.quarkfinance.ufo:id/tv_login
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
-System info: host: &apos;WH-CHUNQINGZ-01&apos;, ip: &apos;172.29.20.31&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_92&apos;
-Driver info: driver.version: JMotorDriver
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 22 more
-... Removed 16 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Jmotor自动化测试-class-failed -->
         </div> <!-- panel Jmotor自动化测试 -->
         <div panel-name="test-xml-Jmotor自动化测试" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -168,20 +49,9 @@ Driver info: driver.version: JMotorDriver
 &lt;suite thread-count=&quot;1&quot; name=&quot;Jmotor自动化测试&quot; parallel=&quot;tests&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
-    &lt;listener class-name=&quot;com.quark.mobile.testng.ScreenShotListener&quot;/&gt;
-    &lt;listener class-name=&quot;com.quark.mobile.testng.RetryListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.zhucq.mobile.testng.ScreenShotListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.zhucq.mobile.testng.RetryListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555&quot;&gt;
-    &lt;parameter name=&quot;appPackage&quot; value=&quot;com.quarkfinance.ufo&quot;/&gt;
-    &lt;parameter name=&quot;appActivity&quot; value=&quot;com.quarkfinance.ufo.ui.StartActivity&quot;/&gt;
-    &lt;parameter name=&quot;platformVersion&quot; value=&quot;6.0.0&quot;/&gt;
-    &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
-    &lt;parameter name=&quot;udid&quot; value=&quot;192.168.189.101:5555&quot;/&gt;
-    &lt;parameter name=&quot;deviceName&quot; value=&quot;Nexus5&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.quark.mobile.testcase.ufo.LoginUFO&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555 --&gt;
 &lt;/suite&gt; &lt;!-- Jmotor自动化测试 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,9 +62,6 @@ Driver info: driver.version: JMotorDriver
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
-              <li>
-                <span class="test-name">LoginUFO-Android6.0.0-Nexus5-192.168.189.101:5555 (1 class)</span>
-              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -219,16 +86,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login')
-data.setCell(0, 2, 'com.quark.mobile.testcase.ufo.LoginUFO')
-data.setCell(0, 3, 28463);
+data.addRows(0);
 window.suiteTableData['Jmotor自动化测试']= { tableData: data, tableDiv: 'times-div-Jmotor自动化测试'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Jmotor自动化测试">
               </div> <!-- times-div-Jmotor自动化测试 -->
             </div> <!-- times-div -->
@@ -239,12 +101,6 @@ return data;
             <span class="header-content">Reporter output for Jmotor自动化测试</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">login({passWord=qwe123, userName=14480372033, toRun=yes})</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><a href=http://192.168.192.130:8080/images/20180322142344768.png target=_blank style=color:red><img src=E:\workspace\new-jmotor\config\screenshot.png style=width:16px;height:16px align=absmiddle><b>20180322142344768.png</b></a></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Jmotor自动化测试" class="panel">
@@ -259,26 +115,6 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.quark.mobile.testcase.ufo.LoginUFO</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriver(Android, 6.0.0, Nexus5, noBrowserName, noBrowserVersion, noAppPath, com.quarkfinance.ufo, com.quarkf...)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">login({passWord=qwe123, userName=14480372033, toRun=yes})</span>
-                <span class="method-start">8500 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">saveFailedScreen([TestResult name=login status=FAILURE method=LoginUFO.login(java.util.HashMap)[pri:0, instance:com.q...)</span>
-                <span class="method-start">36964 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">quitServer</span>
-                <span class="method-start">38408 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

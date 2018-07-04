@@ -13,6 +13,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
@@ -35,13 +37,15 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 public class TestCaseBase {
 
-	protected RemoteWebDriver driver;
-	protected String platformName;
-	protected String platformVersion;
-	protected String deviceName;
-	protected String browserName;
-	protected String browserVersion;
-
+	public RemoteWebDriver driver;
+	public String platformName;
+	public String platformVersion;
+	public String deviceName;
+	public String browserName;
+	public String browserVersion;
+	Properties prop = PropertiesUtils.read("config/global.properties");
+	DesiredCapabilities caps = new DesiredCapabilities();
+	
 	@BeforeClass
 	@Parameters({ "platformName", "platformVersion", "deviceName", "browserName", "browserVersion", "appPath",
 			"appPackage", "appActivity", "bundleId", "udid", "appWaitActivity" })
@@ -51,7 +55,6 @@ public class TestCaseBase {
 			@Optional("noAppPath") String appPath, @Optional("noAppPackage") String appPackage,
 			@Optional("noAppActivity") String appActivity, @Optional("noBundleIdy") String bundleId,
 			@Optional("noUdid") String udid, @Optional("noAppWaitActivity") String appWaitActivity) {
-
 		System.out.println("======BeforeClass initDriver -- thread:" + Thread.currentThread().getId());
 		
 		if(driver != null) return;
@@ -61,9 +64,7 @@ public class TestCaseBase {
 		this.deviceName = deviceName;
 		this.browserName = browserName;
 		this.browserVersion = browserVersion;
-		Properties prop = PropertiesUtils.read("config/global.properties");
-		DesiredCapabilities caps = new DesiredCapabilities();
-
+		
 		// Android Native App Test
 		if (platformName.equals("Android") && browserName.equals("noBrowserName")) {
 			caps.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
@@ -114,9 +115,13 @@ public class TestCaseBase {
 			caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
 			caps.setCapability(MobileCapabilityType.UDID, udid);
 			caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCuiTest");
-			if (appPath.equals("noAppPath")) {
+			caps.setCapability(IOSMobileCapabilityType.START_IWDP, "true");
+			caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "300");
+			caps.setCapability(IOSMobileCapabilityType.XCODE_ORG_ID, "B7JT4RKB36");
+			caps.setCapability(IOSMobileCapabilityType.XCODE_SIGNING_ID, "124248270@qq.com");
+			if (appPath.equals("noAppPath"))
 				caps.setCapability(IOSMobileCapabilityType.BUNDLE_ID, bundleId);
-			} else
+			else
 				caps.setCapability(MobileCapabilityType.APP, appPath);
 			try {
 				driver = new IOSDriver<IOSElement>(
@@ -135,6 +140,9 @@ public class TestCaseBase {
 			caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCuiTest");
 			caps.setCapability(IOSMobileCapabilityType.BROWSER_NAME, MobileBrowserType.SAFARI);
 			caps.setCapability(IOSMobileCapabilityType.START_IWDP, "true");
+			caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "300");
+			caps.setCapability(IOSMobileCapabilityType.XCODE_ORG_ID, "B7JT4RKB36");
+			caps.setCapability(IOSMobileCapabilityType.XCODE_SIGNING_ID, "124248270@qq.com");
 			try {
 				driver = new IOSDriver<WebElement>(
 						new URL(prop.getProperty("gridHubPath", "http://localhost:4723/wd/hub")), caps);
@@ -183,36 +191,37 @@ public class TestCaseBase {
 		DataDriver dataDrive = new DataDriver(file, m.getName());
 		return dataDrive.getData();
 	}
-
+	
 	@AfterMethod
-	public void saveFailedScreen(ITestResult result) {
-		System.out.println("======AfterMethod saveFailedScreen -- thread:" + Thread.currentThread().getId());
-		if (!result.isSuccess()) {
-			String imageDir = PropertiesUtils.read("config/global.properties").getProperty("CataLinaHome") + "/webapps/images/";
-			String imageName = (String) result.getAttribute("imageName");
-			String imagePath = imageDir + imageName;
-			String localPath = System.getProperty("java.io.tmpdir") + imageName;
-			if (driver == null) {
-				System.out.println("Driver已经退出，截图失败");
-				return;
-			}
-			new JMotorDriver<>(driver).screenShot(localPath);
-			if(driver instanceof AppiumDriver)
-				ImageUtils.resize(localPath, localPath, 0.4);
-			else
-				ImageUtils.resize(localPath, localPath, 0.4);
-			Properties prop = PropertiesUtils.read("config/global.properties");
-			String ip = prop.getProperty("ip");
-			int port = Integer.parseInt(prop.getProperty("sshPort","22"));
-			String user = prop.getProperty("user");
-			String password = prop.getProperty("password");
-			SshUtils.sftpUpload(localPath, imagePath, ip, port, user, password);
+	public void quitAfterMethod(ITestResult result) {
+		if(driver != null && prop.getProperty("quitDriver").equals("Method")) {
+			System.out.println("======AfterMethod quitDriver -- thread:" + Thread.currentThread().getId());
+			driver.quit();
+			caps = null;
 		}
 	}
-
 	@AfterClass
-	public void quitServer() {
-		System.out.println("======AfterClass quitServer -- thread:" + Thread.currentThread().getId());
-		if(driver != null) driver.quit();
+	public void quitAfterClass(ITestResult result) {
+		if(driver != null && prop.getProperty("quitDriver").equals("Class")) {
+			System.out.println("======AfterClass quitDriver -- thread:" + Thread.currentThread().getId());
+			driver.quit();
+			caps = null;
+		}
+	}
+	@AfterTest
+	public void quitAfterTest(ITestResult result) {
+		if(driver != null && prop.getProperty("quitDriver").equals("Test")) {
+			System.out.println("======AfterTest quitDriver -- thread:" + Thread.currentThread().getId());
+			driver.quit();
+			caps = null;
+		}
+	}
+	@AfterSuite
+	public void quitAfterSuite(ITestResult result) {
+		if(driver != null && prop.getProperty("quitDriver").equals("Suite")) {
+			System.out.println("======AfterSuite quitDriver -- thread:" + Thread.currentThread().getId());
+			driver.quit();
+			caps = null;
+		}
 	}
 }
